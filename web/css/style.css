@@ -1,0 +1,56 @@
+/*******************************
+ *      RESET CSS              *
+ ******************************/
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, select, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, menu, time, mark, audio, video { margin:0; padding:0; border:0; outline:0; font-size:100%; font-weight:inherit; font-style:inherit; font-size:100%; vertical-align:baseline; background:transparent; }
+
+article, aside, figure, footer, header, hgroup, nav, section { display:block; }
+ul { list-style:none; margin:0; padding:0; }
+strong, b { font-weight:bold; }
+i, em { font-style:italic; }
+h1, h2, h3, h4, h5, h6 { font-weight:normal; }
+blockquote, q { quotes:none; }
+blockquote:before, blockquote:after,
+q:before, q:after { content:''; content:none; }
+a { margin:0; padding:0; outline:none; font-size:100%; vertical-align:baseline; background:transparent; cursor:pointer; }
+ins { background-color:#ff9; color:#000; text-decoration:none; }
+mark { background-color:#ff9; color:#000; font-style:italic; font-weight:bold; }
+del { text-decoration: line-through; }
+abbr[title], dfn[title] { border-bottom:1px dotted #000; cursor:help; }
+table { width: 100%; border-collapse: separate; border-spacing:0; }
+*+html table { border-collapse: collapse; }
+hr { display:block; height:1px; border:0; border-top:1px solid #ccc; margin:1em 0; padding:0; }
+input, select { vertical-align:middle; }
+input { border:0; }
+button { border:0; margin:0; padding:0; background:none; cursor:pointer; }
+html { -webkit-font-smoothing: antialiased; } /* MacOS only */
+*+html img { -ms-interpolation-mode: bicubic; }
+* html img { -ms-interpolation-mode: bicubic; }
+
+/*******************************
+ *      Base Css               *
+ ******************************/
+.sf-toolbar {
+	position:fixed;
+}
+#blockGlobal .header {
+	height:80px;
+}
+#blockGlobal .header .container {
+	padding-top:0px;
+	padding-bottom:0px;
+}
+#blockGlobal .header .logo {
+	width:30%;
+}
+#blockGlobal .header .logo a {
+	display:block;
+}
+#blockGlobal .blockBody {
+	height:calc(100vh - 80px);
+}
+.container {
+	max-width:1100px;
+	padding-top:20px;
+	padding-bottom:20px;
+	margin: 0 auto;
+}

@@ -5,12 +5,12 @@ namespace BookcaseBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * author
+ * Autors
  *
- * @ORM\Table(name="author")
- * @ORM\Entity(repositoryClass="BookcaseBundle\Repository\authorRepository")
+ * @ORM\Table(name="autors")
+ * @ORM\Entity(repositoryClass="BookcaseBundle\Repository\AutorsRepository")
  */
-class author
+class Autors
 {
     /**
      * @var int
@@ -24,23 +24,23 @@ class author
     /**
      * @var string
      *
-     * @ORM\Column(name="name", type="string", length=255)
+     * @ORM\Column(name="first_name", type="string", length=255)
      */
-    private $name;
+    private $firstName;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="firstname", type="string", length=255)
+     * @ORM\Column(name="last_name", type="string", length=255)
      */
-    private $firstname;
+    private $lastName;
 
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="birthdate", type="datetime", nullable=true)
+     * @ORM\Column(name="birth_date", type="date", nullable=true)
      */
-    private $birthdate;
+    private $birthDate;
 
     /**
      * @var string
@@ -52,7 +52,7 @@ class author
     /**
      * @var binary
      *
-     * @ORM\Column(name="picture", type="binary", nullable=true)
+     * @ORM\Column(name="picture", type="binary")
      */
     private $picture;
 
@@ -68,79 +68,79 @@ class author
     }
 
     /**
-     * Set name
+     * Set firstName
      *
-     * @param string $name
-     * @return author
+     * @param string $firstName
+     * @return Autors
      */
-    public function setName($name)
+    public function setFirstName($firstName)
     {
-        $this->name = $name;
+        $this->firstName = $firstName;
 
         return $this;
     }
 
     /**
-     * Get name
+     * Get firstName
      *
      * @return string 
      */
-    public function getName()
+    public function getFirstName()
     {
-        return $this->name;
+        return $this->firstName;
     }
 
     /**
-     * Set firstname
+     * Set lastName
      *
-     * @param string $firstname
-     * @return author
+     * @param string $lastName
+     * @return Autors
      */
-    public function setFirstname($firstname)
+    public function setLastName($lastName)
     {
-        $this->firstname = $firstname;
+        $this->lastName = $lastName;
 
         return $this;
     }
 
     /**
-     * Get firstname
+     * Get lastName
      *
      * @return string 
      */
-    public function getFirstname()
+    public function getLastName()
     {
-        return $this->firstname;
+        return $this->lastName;
     }
 
     /**
-     * Set birthdate
+     * Set birthDate
      *
-     * @param \DateTime $birthdate
-     * @return author
+     * @param \DateTime $birthDate
+     * @return Autors
      */
-    public function setBirthdate($birthdate)
+    public function setBirthDate($birthDate)
     {
-        $this->birthdate = $birthdate;
+        $this->birthDate = $birthDate;
 
         return $this;
     }
 
     /**
-     * Get birthdate
+     * Get birthDate
      *
      * @return \DateTime 
      */
-    public function getBirthdate()
+    public function getBirthDate()
     {
-        return $this->birthdate;
+        return $this->birthDate;
     }
 
     /**
      * Set biography
      *
      * @param string $biography
-     * @return author
+     * @return Autors
      */
     public function setBiography($biography)
     {
@@ -163,7 +163,7 @@ class author
      * Set picture
      *
      * @param binary $picture
-     * @return author
+     * @return Autors
      */
     public function setPicture($picture)
     {
