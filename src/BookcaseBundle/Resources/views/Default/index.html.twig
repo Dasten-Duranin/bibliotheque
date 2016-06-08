@@ -1,10 +1,7 @@
-<html>
-	<header>
-	</header>
-	<body>
-		<h1>Index</h1>
-	</body>
-	<a href="{{ path('bookcase_read')}}">Lire</a>
-	<a href="{{ path('bookcase_search')}}">Rechercher</a>
-	<a href="{{ path('dashboard_homepage')}}">Back office</a>
-</html>
+{% extends 'BookcaseBundle:Default:layout.html.twig' %}
+{% block body %}
+    <h1>Index</h1>
+    <a href="{{ path('bookcase_read') }}">Lire</a>
+    <a href="{{ path('bookcase_search') }}">Rechercher</a>
+    <a href="{{ path('dashboard_homepage') }}">Back office</a>
+{% endblock body %}

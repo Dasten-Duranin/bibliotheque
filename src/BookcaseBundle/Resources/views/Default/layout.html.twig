@@ -1,0 +1,19 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link href="{{ asset('css/style.css') }}" type="text/css" rel="stylesheet">
+    <link href="{{ asset('css/jquery-ui.css') }}" type="text/css" rel="stylesheet">
+    <link href="{{ asset('css/jquery-ui-theme.css') }}" type="text/css" rel="stylesheet">
+    <link href="{{ asset('css/jquery-ui-structure.css') }}" type="text/css" rel="stylesheet">
+    <script src="{{ asset('js/jquery2.js') }}" rel="script" type="javascript"></script>
+    <script src="{{ asset('js/jquery-ui.js') }}" rel="script" type="javascript"></script>
+    {% block funtions %}{% endblock funtions %}
+</head>
+<body>
+    <div class="container">
+        <div class="menu"></div>
+        {% block body %}{% endblock body %}
+        {% block javascript %}{% endblock javascript %}
+    </div>
+</body>
+</html>
