@@ -1,0 +1,11 @@
+dashboard_homepage:
+    path:     /
+    defaults: { _controller: DashboardBundle:Default:index }
+
+dashboard_addBook:
+    path:     /addBook
+    defaults: { _controller: DashboardBundle:Default:addBook }
+
+dashboard_addAutor:
+    path:     /addAutor
+    defaults: { _controller: DashboardBundle:Default:addAutor }

@@ -1,0 +1,11 @@
+bookcase_homepage:
+    path:     /
+    defaults: { _controller: BookcaseBundle:Default:index }
+
+bookcase_search:
+    path: /search
+    defaults: { _controller: BookcaseBundle:Default:search }
+
+bookcase_read:
+    path: /read/
+    defaults: { _controller: BookcaseBundle:Default:read }

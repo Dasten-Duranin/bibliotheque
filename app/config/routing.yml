@@ -1,0 +1,8 @@
+dashboard:
+    resource: "@DashboardBundle/Resources/config/routing.yml"
+    prefix:   /dashboard
+
+bookcase:
+    resource: "@BookcaseBundle/Resources/config/routing.yml"
+    prefix:   /
+
