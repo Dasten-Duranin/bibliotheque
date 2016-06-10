@@ -1,0 +1,60 @@
+#blockGlobal {
+	display:flex;
+	width:100vw;
+}
+#blockGlobal .container {
+	max-width:1900px;
+	padding:20px;
+	display:block;
+}
+#blockGlobal .blockTitle .title-1 {
+	font-size:22px;
+}
+#blockGlobal .dashboardMenu {
+	width:300px;
+	height:100vh;
+	background-color:#222;
+}
+#blockGlobal .dashboardMenu .logo {
+	background-color:#FFF;
+	padding:20px;
+}
+#blockGlobal .dashboardMenu .logo a {
+	display:block;
+}
+#blockGlobal .dashboardMenu .logo img {
+	display:flex;
+	margin:0 auto;
+}
+#blockGlobal .dashboardMenu .menu .menuItems .item {
+	display: block;
+	padding: 10px 0;
+}
+#blockGlobal .dashboardMenu .menu .menuItems .item.subItem {
+	display: block;
+	padding: 0px;
+}
+#blockGlobal .dashboardMenu .menu .menuItems .item span.underlink {
+	padding:10px;
+	color:#eee;
+}
+#blockGlobal .dashboardMenu .menu .menuItems .item span.underlink span {
+	border-bottom:0 none;
+}
+#blockGlobal .dashboardMenu .menu .subMenuItems {
+	padding-left:20px;
+}
+#blockGlobal .dashboardMenu .menu .menuItems .item a:hover,
+#blockGlobal .dashboardMenu .menu .menuItems .item a.active {
+	text-decoration:none;
+	background-color:#333;
+}
+#blockGlobal .menu .menuItems .item a.active span.underlink span, #blockGlobal .menu .menuItems .item a:hover span.underlink span {
+	border-bottom:0;
+}
+
+
+#blockGlobal .blockBody {
+	width: calc(100vw - 300px);
+	height:100vh;
+}

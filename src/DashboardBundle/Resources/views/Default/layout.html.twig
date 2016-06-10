@@ -1,0 +1,81 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link href="{{ asset('css/style.css') }}" type="text/css" rel="stylesheet">
+	<link href="{{ asset('css/dashboard.css') }}" type="text/css" rel="stylesheet">
+    <link href="{{ asset('css/jquery-ui.css') }}" type="text/css" rel="stylesheet">
+    {% block style %}{% endblock style %}
+    <link href="{{ asset('css/jquery-ui-theme.css') }}" type="text/css" rel="stylesheet">
+    <link href="{{ asset('css/jquery-ui-structure.css') }}" type="text/css" rel="stylesheet">
+    <script src="{{ asset('js/jquery2.js') }}" rel="script" type="javascript"></script>
+    <script src="{{ asset('js/jquery-ui.js') }}" rel="script" type="javascript"></script>
+    {% block funtions %}{% endblock funtions %}
+</head>
+<body>
+	<div id="blockGlobal">
+		<div class="dashboardMenu">
+			<div class="logo">
+				<a href="{{ path('bookcase_homepage') }}">
+					<img src="{{ asset('img/logoBibliotheque.jpg') }}" />
+				</a>
+			</div>
+			<div class="menu">
+				<ul class="menuItems">
+					<li class="item">
+						<a class="link" href="{{ path('dashboard_books') }}">
+							<span class="underlink"><span>Liste des livres</span></span>
+						</a>
+						<ul class="subMenuItems">
+							<li class="item subItem">
+								<a class="link" href="{{ path('dashboard_addBook') }}">
+									<span class="underlink"><span>Ajouter un livre</span></span>
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li class="item">
+						<a class="link" href="{{ path('dashboard_authors') }}">
+							<span class="underlink"><span>Liste des auteurs</span></span>
+						</a>
+						<ul class="subMenuItems">
+							<li class="item subItem">
+								<a class="link" href="{{ path('dashboard_addAuthor') }}">
+									<span class="underlink"><span>Ajouter un auteur</span></span>
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li class="item">
+						<a class="link" href="{{ path('dashboard_genres') }}">
+							<span class="underlink"><span>Liste des genres</span></span>
+						</a>
+						<ul class="subMenuItems">
+							<li class="item subItem">
+								<a class="link" href="{{ path('dashboard_addGenre') }}">
+									<span class="underlink"><span>Ajouter un genre</span></span>
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li class="item">
+						<a class="link" href="{{ path('dashboard_categories') }}">
+							<span class="underlink"><span>Liste des catégories</span></span>
+						</a>
+						<ul class="subMenuItems">
+							<li class="item subItem">
+								<a class="link" href="{{ path('dashboard_addCategory') }}">
+									<span class="underlink"><span>Ajouter un catégories</span></span>
+								</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="blockBody">
+			{% block body %}{% endblock body %}
+			{% block javascript %}{% endblock javascript %}
+		</div>
+	</div>
+</body>
+</html>

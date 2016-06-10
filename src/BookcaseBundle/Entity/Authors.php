@@ -5,12 +5,12 @@ namespace BookcaseBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Autors
+ * Authors
  *
- * @ORM\Table(name="autors")
- * @ORM\Entity(repositoryClass="BookcaseBundle\Repository\AutorsRepository")
+ * @ORM\Table(name="authors")
+ * @ORM\Entity(repositoryClass="BookcaseBundle\Repository\AuthorsRepository")
  */
-class Autors
+class Authors
 {
     /**
      * @var int
@@ -52,11 +52,21 @@ class Autors
     /**
      * @var binary
      *
-     * @ORM\Column(name="picture", type="binary")
+     * @ORM\Column(name="picture", type="binary", nullable=true)
      */
     private $picture;
 
+    /**
+     * @var arrayCollection
+     *
+     * @ORM\ManyToMany(targetEntity="BookcaseBundle\Entity\Books", inversedBy="authors")
+     */
+    private $books;
 
+	public function __toString()
+	{
+		return $this->firstName.' '.$this->lastName;
+	}
     /**
      * Get id
      *
@@ -71,7 +81,7 @@ class Autors
      * Set firstName
      *
      * @param string $firstName
-     * @return Autors
+     * @return Authors
      */
     public function setFirstName($firstName)
     {
@@ -94,7 +104,7 @@ class Autors
      * Set lastName
      *
      * @param string $lastName
-     * @return Autors
+     * @return Authors
      */
     public function setLastName($lastName)
     {
@@ -117,7 +127,7 @@ class Autors
      * Set birthDate
      *
      * @param \DateTime $birthDate
-     * @return Autors
+     * @return Authors
      */
     public function setBirthDate($birthDate)
     {
@@ -140,7 +150,7 @@ class Autors
      * Set biography
      *
      * @param string $biography
-     * @return Autors
+     * @return Authors
      */
     public function setBiography($biography)
     {
@@ -163,7 +173,7 @@ class Autors
      * Set picture
      *
      * @param binary $picture
-     * @return Autors
+     * @return Authors
      */
     public function setPicture($picture)
     {
@@ -180,5 +190,45 @@ class Autors
     public function getPicture()
     {
         return $this->picture;
+    }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->books = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add books
+     *
+     * @param \BookcaseBundle\Entity\Books $books
+     * @return Authors
+     */
+    public function addBook(\BookcaseBundle\Entity\Books $books)
+    {
+        $this->books[] = $books;
+
+        return $this;
+    }
+
+    /**
+     * Remove books
+     *
+     * @param \BookcaseBundle\Entity\Books $books
+     */
+    public function removeBook(\BookcaseBundle\Entity\Books $books)
+    {
+        $this->books->removeElement($books);
+    }
+
+    /**
+     * Get books
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getBooks()
+    {
+        return $this->books;
     }
 }

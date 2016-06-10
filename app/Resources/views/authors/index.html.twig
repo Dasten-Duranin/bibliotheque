@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Authors list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Birthdate</th>
+                <th>Biography</th>
+                <th>Picture</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for author in authors %}
+            <tr>
+                <td><a href="{{ path('authors_show', { 'id': author.id }) }}">{{ author.id }}</a></td>
+                <td>{{ author.firstName }}</td>
+                <td>{{ author.lastName }}</td>
+                <td>{% if author.birthDate %}{{ author.birthDate|date('Y-m-d') }}{% endif %}</td>
+                <td>{{ author.biography }}</td>
+                <td>{{ author.picture }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('authors_show', { 'id': author.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('authors_edit', { 'id': author.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('authors_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+{% endblock %}

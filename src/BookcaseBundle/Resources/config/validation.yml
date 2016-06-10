@@ -1,0 +1,6 @@
+Bookcase\Entity\Books:
+    properties:
+        name:
+            - NoBlank: {message: Le champ nom doit être saisi}
+        url:
+            - NoBlank: ~

@@ -1,3 +1,7 @@
+bookcase_authors:
+    resource: "@BookcaseBundle/Controller/AuthorsController.php"
+    type:     annotation
+
 dashboard:
     resource: "@DashboardBundle/Resources/config/routing.yml"
     prefix:   /dashboard

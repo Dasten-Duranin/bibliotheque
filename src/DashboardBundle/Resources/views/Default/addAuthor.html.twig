@@ -2,12 +2,13 @@
 {% block body %}
 <div class="section">
 	<div class="container">
-		DASHBOARD IS ME!
-		<br>
-		<br>
-		<a href="{{ path('bookcase_homepage') }}">GO BOOKCASE</a>
-		<br>
-		<br>
+		<div class="blockTitle">
+			<div class="title-1">
+				<h1>Ajouter un auteur</h1>
+			</div>
+		</div>
+		{{ form_start(monForm) }}
+		{{ form_end(monForm) }}
 	</div>
 </div>
 {% endblock body %}

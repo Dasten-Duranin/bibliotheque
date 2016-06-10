@@ -1,3 +1,7 @@
+bookcase_categories:
+    resource: "@BookcaseBundle/Resources/config/routing/categories.yml"
+    prefix:   /categories
+
 bookcase_homepage:
     path:     /
     defaults: { _controller: BookcaseBundle:Default:index }

@@ -1,16 +1,21 @@
-<html>
-<head>
-    <meta charset="utf-8">
-</head>
-<body>
-    TURN MY PAGES!
-    <br>
-    <br>
-    <a href="{{ path('bookcase_homepage') }}">GO BOOKCASE</a>
-    <br>
-    <a href="{{ path('dashboard_homepage') }}">GO DASHBOARD</a>
-    <br>
-    <a href="{{ path('dashboard_addAutor') }}">GO AUTORS</a>
-    <br>
-</body>
-</html>
+{% extends 'DashboardBundle:Default:layout.html.twig' %}
+{% block body %}
+    {#{{ form(monForm }}#}
+    {#GENERE LE FORM COMPLET#}
+    {{ form_start(monForm) }}
+    {#{{ form_start(monForm, {'attr':{ 'novalidate':'novalidate' }}) }}#}
+    {#<div class="form-group">#}
+    {#{{ form_row(monForm.bookName) }}#}
+    {#{{ form_widget(monForm.bookName,{'attr':{'class':'form-control','placeholder':'Votre nom'}}) }}#}
+    {#</div>#}
+    {#<div class="form-group">#}
+    {#{{ form_row(monForm.publish_date) }}#}
+    {#{{ form_errors(monForm.publishDate) }}#}
+    {#{{ form_label(monForm.chapters_number, 'Date publication', {'attr':{'class':''}}) }}#}
+    {#{{ form_row(monForm.chapters_number) }}#}
+    {#{{ form_row(monForm.pages_number) }}#}
+    {#{{ form_row(monForm.cover) }}#}
+    {#</div>#}
+    {#{{ form_widget(monForm.submit, {'attr':{'class':'btn, btn-default'}}) }}#}
+    {{ form_end(monForm) }}
+{% endblock body %}

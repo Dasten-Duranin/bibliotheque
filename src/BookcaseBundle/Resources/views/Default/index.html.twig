@@ -1,4 +1,7 @@
 {% extends 'BookcaseBundle:Default:layout.html.twig' %}
+{% block style %}
+    <link href="{{ asset('css/style.css') }}" type="text/css" rel="stylesheet">
+{% endblock style %}
 {% block body %}
     <h1>Index</h1>
     <a href="{{ path('bookcase_read') }}">Lire</a>

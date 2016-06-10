@@ -2,10 +2,34 @@ dashboard_homepage:
     path:     /
     defaults: { _controller: DashboardBundle:Default:index }
 
+dashboard_books:
+    path:     /books
+    defaults: { _controller: DashboardBundle:Default:books }
+
 dashboard_addBook:
     path:     /addBook
     defaults: { _controller: DashboardBundle:Default:addBook }
 
-dashboard_addAutor:
-    path:     /addAutor
-    defaults: { _controller: DashboardBundle:Default:addAutor }
+dashboard_authors:
+    path:     /authors
+    defaults: { _controller: DashboardBundle:Default:authors }
+
+dashboard_addAuthor:
+    path:     /addAuthor
+    defaults: { _controller: DashboardBundle:Default:addAuthor }
+
+dashboard_genres:
+    path:     genres/
+    defaults: { _controller: DashboardBundle:Default:genres }
+
+dashboard_addGenre:
+    path:     /addGenre
+    defaults: { _controller: DashboardBundle:Default:addGenre }
+
+dashboard_categories:
+    path:     categories/
+    defaults: { _controller: DashboardBundle:Default:categories }
+
+dashboard_addCategory:
+    path:     /addCategory
+    defaults: { _controller: DashboardBundle:Default:addCategory }
